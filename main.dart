@@ -25,4 +25,7 @@ void main() {
   //late 변수는 나중에 선언 할 수 있음
   late final chans;
   chans = "late"; // chans는 다시 변경 불가!
+  //const 변수는 컴파일 하기 전부터 알고있는 변수만 사용가능!
+  //api호출 후 사용하는 변수는 부적합
+  const max_allowed_price = 120;
 }
