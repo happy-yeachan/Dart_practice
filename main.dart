@@ -20,4 +20,6 @@ void main() {
   // yea?.~~
   // 는 yea가 null이 아니면 ~~ 하기 로 쓸 수 있음
   print(yea);
+  //final변수는 수정할 수 없음
+  final chan = "final";
 }
