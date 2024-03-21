@@ -20,4 +20,15 @@ void main() {
   var t = "yeachan";
   var age = 10;
   print("hello my name is $t , I'm ${age + 15} years old.");
+
+  //Collection For
+  // 리스트 안에서 간단히 다른 리스 값을 가져와 다룰 수 있음!!
+  var oldFriends = ['nico', 'lynn'];
+  var newFriends = [
+    'lewis',
+    'ralph',
+    'darren',
+    for (var friend in oldFriends) "old $friend",
+  ];
+  print(newFriends);
 }
