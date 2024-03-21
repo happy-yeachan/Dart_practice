@@ -42,4 +42,13 @@ void main() {
     {'name': 'yeachan', 'age': 25},
     {'name': 'juchan', 'age': 26},
   ]; // 이 방법은 비추래 ㅇㅅㅇ
+
+  //Sets
+  // 중복이 없는 리스트라고 생각하면 됨 튜블임 ㅇㅇ
+  Set<int> numbers3 = {1, 2, 3, 4, 5};
+  // var numbers3 = ~ 로도 선언 가능
+  numbers3.add(1);
+  numbers3.add(1);
+  numbers3.add(1);
+  print(numbers3); // 1을 아무리 add하도 무조건 하나!
 }
