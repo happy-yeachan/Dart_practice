@@ -14,4 +14,10 @@ void main() {
     if (givemefive) 5, //안에 조건에 따라 들어갈 요소도 지정 가능!
   ];
   numbers.add(2);
+
+  // String Interpolation - text에 변수 추가 법
+  // $를 사용하면 손쉽게 가능
+  var t = "yeachan";
+  var age = 10;
+  print("hello my name is $t , I'm ${age + 15} years old.");
 }
