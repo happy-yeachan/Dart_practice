@@ -31,4 +31,15 @@ void main() {
     for (var friend in oldFriends) "old $friend",
   ];
   print(newFriends);
+
+  //Maps
+  // 딕셔너리라고 보면 됨 ㅇㅇ 사용법도 비슷한듯?
+  var map = {
+    "name": "yeachan",
+    "age": 12,
+  };
+  List<Map<String, Object>> players = [
+    {'name': 'yeachan', 'age': 25},
+    {'name': 'juchan', 'age': 26},
+  ]; // 이 방법은 비추래 ㅇㅅㅇ
 }
