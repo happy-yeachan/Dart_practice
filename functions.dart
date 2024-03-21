@@ -22,6 +22,15 @@ String capitalizeName(String? name) =>
     // name != null ? name.toUpperCase() : 'what';
     // 위 코드를 아래처럼 쓸 수 있음 ㄷㄷ
     name?.toUpperCase() ?? 'what';
+
+// typedef로 귀찬은 선언문을 줄일 수 있음
+typedef Intlist = List<int>;
+
+Intlist reverselist(Intlist list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
 void main() {
   print(sayHello('yeachan'));
   print(sayHello2(
@@ -36,4 +45,6 @@ void main() {
   String? name;
   // name이 null이면 yeachan으로 한다를 이렇게 구현 할 수 있음!!
   name ??= 'yeachan';
+
+  print(reverselist([1, 2, 3]));
 }
