@@ -10,8 +10,27 @@ class Player {
   }
 }
 
+// 파이썬의 __init__이랑 비슷한 느낌 ㅇㅇ
+class Player2 {
+  late final String name;
+  late int age;
+
+  // Player2(String name, int age) {
+  //   this.name = name;
+  //   this.age = age;
+  // }
+  // 위 코드는 아래와 같이 쓸 수 있음
+  Player2(this.name, this.age);
+  void say() {
+    print("hello im $name");
+  }
+}
+
 void main() {
   var player = Player();
   print(player.age);
   player.say();
+
+  var player2 = Player2("yeachan", 25);
+  print(player2.name);
 }
