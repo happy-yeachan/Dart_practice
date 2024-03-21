@@ -22,4 +22,7 @@ void main() {
   print(yea);
   //final변수는 수정할 수 없음
   final chan = "final";
+  //late 변수는 나중에 선언 할 수 있음
+  late final chans;
+  chans = "late"; // chans는 다시 변경 불가!
 }
