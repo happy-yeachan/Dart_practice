@@ -16,6 +16,12 @@ String sayHello2(
 // 근데 잘 안씀 ㅋㅋ named parameters를 더 잘 쓴다고 함
 String sayHello3(String name, int age, [String? country = 'korea']) =>
     "$name $age $country";
+
+// QQ Operator
+String capitalizeName(String? name) =>
+    // name != null ? name.toUpperCase() : 'what';
+    // 위 코드를 아래처럼 쓸 수 있음 ㄷㄷ
+    name?.toUpperCase() ?? 'what';
 void main() {
   print(sayHello('yeachan'));
   print(sayHello2(
@@ -24,4 +30,10 @@ void main() {
     name: 'yeachan',
   ));
   print(sayHello3("yeachan", 25));
+  print(capitalizeName("yeachan"));
+  print(capitalizeName(null));
+
+  String? name;
+  // name이 null이면 yeachan으로 한다를 이렇게 구현 할 수 있음!!
+  name ??= 'yeachan';
 }
