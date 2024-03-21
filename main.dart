@@ -13,5 +13,11 @@ void main() {
   dynamic dd;
   d = 2;
   d = "yes";
-  print(i);
+  // null값도 가질 수 있는 변수 선언
+  // ?를 붙여주면 됨
+  String? yea = "yea";
+  yea = null;
+  // yea?.~~
+  // 는 yea가 null이 아니면 ~~ 하기 로 쓸 수 있음
+  print(yea);
 }
