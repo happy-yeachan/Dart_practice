@@ -42,6 +42,31 @@ class Player3 {
   });
 }
 
+class Player4 {
+  final String name;
+  int xp;
+  String team;
+  int age;
+
+  Player4({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  });
+
+  // Named Constructors
+  // :를 넣음으로써 너는 Dart에게 여기서 Player객체를 초기화하겠다
+  // 나머지 두 인자는 입력받아 사용
+  Player4.createRedPlayer({
+    required String name,
+    required int age,
+  })  : this.age = age,
+        this.name = name,
+        this.team = 'red',
+        this.xp = 0;
+}
+
 void main() {
   var player = Player();
   print(player.age);
@@ -57,4 +82,7 @@ void main() {
     age: 25,
   );
   print(player3.name);
+
+  var player4 = Player4.createRedPlayer(name: "yeachan", age: 25);
+  print(player4.xp);
 }
