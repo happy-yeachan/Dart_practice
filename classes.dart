@@ -26,6 +26,22 @@ class Player2 {
   }
 }
 
+// Named Constructor Parameters
+// 순서를 기억하지 않아도 이름을 지정하여 파라미터를 넘길 수 있음
+class Player3 {
+  final String name;
+  int xp;
+  String team;
+  int age;
+
+  Player3({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  });
+}
+
 void main() {
   var player = Player();
   print(player.age);
@@ -33,4 +49,12 @@ void main() {
 
   var player2 = Player2("yeachan", 25);
   print(player2.name);
+
+  var player3 = Player3(
+    name: "yeachan",
+    xp: 1200,
+    team: "school",
+    age: 25,
+  );
+  print(player3.name);
 }
