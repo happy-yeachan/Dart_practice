@@ -67,6 +67,22 @@ class Player4 {
         this.xp = 0;
 }
 
+// api를 통해 json 데이터를 받아와 클래스를 만들 때는 아래와 같은 방식으로 함
+class Player5 {
+  final String name;
+  int xp;
+  String team;
+
+  Player5.fromJson(Map<String, dynamic> playerJson)
+      : name = playerJson['name'],
+        xp = playerJson["xp"],
+        team = playerJson["team"];
+
+  void say() {
+    print("hello im $name");
+  }
+}
+
 void main() {
   var player = Player();
   print(player.age);
@@ -85,4 +101,27 @@ void main() {
 
   var player4 = Player4.createRedPlayer(name: "yeachan", age: 25);
   print(player4.xp);
+
+  var apiData = [
+    {
+      "name": "yeachan",
+      "team": "red",
+      "xp": 123,
+    },
+    {
+      "name": "yeachan",
+      "team": "red",
+      "xp": 123,
+    },
+    {
+      "name": "yeachan",
+      "team": "red",
+      "xp": 123,
+    },
+  ];
+// json 데이터를 가지고 클래스 선언
+  apiData.forEach((playerJson) {
+    var player5 = Player5.fromJson(playerJson);
+    player5.say();
+  });
 }
