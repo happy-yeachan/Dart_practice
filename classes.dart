@@ -1,3 +1,8 @@
+//enum
+//enum은 오타같은걸 방지하기 위해 선택의 폭을 좁혀주는 역할을 함
+// 아래와 같이 목록을 미리 만들어 넣을 수 있음
+enum Team { red, blue }
+
 // 클래스 선언은 이런 식으로 파이썬이랑 비슷한듯 ㅇㅇ
 // 근데 this.name은 잘 안쓴다.
 // 예외적으로 지역변수와 변수명이 겹치면 구분을 위해 쓰기도 함
@@ -45,7 +50,8 @@ class Player3 {
 class Player4 {
   String name;
   int xp;
-  String team;
+  // enum으로 만든 Team을 사용할거야!
+  Team team;
   int age;
 
   Player4({
@@ -63,7 +69,7 @@ class Player4 {
     required int age,
   })  : this.age = age,
         this.name = name,
-        this.team = 'red',
+        this.team = Team.red,
         this.xp = 0;
 }
 
@@ -127,10 +133,11 @@ void main() {
 
   //Cascade Notation
   // ..에서 .로 player4_2를 대신해서 사용 대신 이전에 ;를 사용하지 않고 이어서 써야함
-  var player4_2 = Player4(name: "yeachna", xp: 123, team: "red", age: 25)
+  var player4_2 = Player4(name: "yeachna", xp: 123, team: Team.red, age: 25)
     ..name = "yechan2"
     ..xp = 321
-    ..team = "white"
+    // enum으로 선언한 red 와 blue 둘 중 하나만 지정 할 수 있음!!
+    ..team = Team.blue
     ..age = 26;
   print(player4_2.name);
 }
