@@ -43,7 +43,7 @@ class Player3 {
 }
 
 class Player4 {
-  final String name;
+  String name;
   int xp;
   String team;
   int age;
@@ -124,4 +124,13 @@ void main() {
     var player5 = Player5.fromJson(playerJson);
     player5.say();
   });
+
+  //Cascade Notation
+  // ..에서 .로 player4_2를 대신해서 사용 대신 이전에 ;를 사용하지 않고 이어서 써야함
+  var player4_2 = Player4(name: "yeachna", xp: 123, team: "red", age: 25)
+    ..name = "yechan2"
+    ..xp = 321
+    ..team = "white"
+    ..age = 26;
+  print(player4_2.name);
 }
