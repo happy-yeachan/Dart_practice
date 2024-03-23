@@ -1,18 +1,28 @@
-// abstract class 추상 클래스
-// 다른 클래스들이 직접 구현 해야하는 메소드들을 모아놓은 일종의 청사진
-// 특정 메소드를 구현하도록 강제함
-// 그렇게 잘 쓰이지는 않음
+// Inheritance
+// 상속을 하고 super를 이용해 부모 클래스의 생성자를 호출할 수 있다.
 
-abstract class Human {
-  void walk();
-}
-
-class Player extends Human {
-  final String name = "yeachan";
-  int age = 25;
+class Human {
+  final String name;
+  Human({required this.name});
 
   void say() {
     print("hello im $name");
+  }
+}
+
+enum Team { red, blue }
+
+class Player extends Human {
+  final Team team;
+  Player({
+    required this.team,
+    required String name,
+  }) : super(name: name);
+
+  @override
+  void say() {
+    super.say();
+    print("im ${team} ");
   }
 
   void walk() {
@@ -21,6 +31,6 @@ class Player extends Human {
 }
 
 void main() {
-  var player = Player();
-  player.walk();
+  var player = Player(team: Team.red, name: "yeachan");
+  player.say();
 }
